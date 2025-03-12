@@ -18,7 +18,7 @@ def process_data():
         songs, name = AppleMusicWebScrape.web_scrape(url)
         result = SpotifyAPI.create_playlist(songs, name)
    
-        response = jsonify({"link": result})
+        response = jsonify(result)
         return response
 
     except Exception as e:

@@ -1,1 +1,4 @@
 myenv
+.env
+token*
+__pycache__

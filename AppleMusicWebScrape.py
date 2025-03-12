@@ -15,7 +15,7 @@ def web_scrape(link):
     try:
         WebDriverWait(driver, 10).until(expected_conditions.presence_of_element_located((By.CLASS_NAME, 'songs-list svelte-1vyb47z songs-list--header-is-visible songs-list--playlist')))
     except Exception:
-        print("Page timed out.")
+        pass
 
     page = driver.page_source
     soup = BeautifulSoup(page, 'html.parser')
