@@ -16,7 +16,7 @@ def create_playlist(songs, name):
     spotify_uris = []
     data = {"message" : [], "link" : ""}
     for song, artist in songs.values():
-        result = sp.search(q=f"track:{song + " " + artist}",type="track")
+        result = sp.search(q=f"track:{song} {artist}",type="track")
         try:
             song_uri = result['tracks']['items'][0]['uri']
             spotify_uris.append(song_uri[14:])
